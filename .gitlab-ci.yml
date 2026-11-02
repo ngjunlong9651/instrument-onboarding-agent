@@ -1,0 +1,26 @@
+# Release gate: tests, then the golden-set retrieval eval and scenario eval.
+# A drop in hybrid Recall@3 or MRR below evals/baseline.json, or any scenario ending differently, blocks the pipeline.
+image: python:3.12-slim
+
+variables:
+  AGENT_OFFLINE: "1"
+  AGENT_VENDOR_LATENCY_MS: "0"
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths: [.cache/pip]
+
+stages: [test, eval]
+
+before_script:
+  - pip install -e ".[dev]"
+
+tests:
+  stage: test
+  script:
+    - pytest -q
+
+eval-gate:
+  stage: eval
+  script:
+    - python evals/run_eval.py

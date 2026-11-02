@@ -1,0 +1,29 @@
+{
+  "_comment": "Mock vendor data. Field names mimic a typical reference data feed. 'faults' drive the failure scenarios; Prices and faults are invented; some ISINs are real public sovereign identifiers.",
+  "reference_data": {
+    "US91282CJL54": {"ID_ISIN": "US91282CJL54", "SECURITY_DES": "T 4 1/2 11/15/33", "SECURITY_TYP": "GOVT", "ISSUER": "US Treasury", "CRNCY": "USD", "CPN": 4.5, "ISSUE_DT": "20231115", "MATURITY": "20331115", "DAY_CNT_DES": "ACT/ACT"},
+    "XS2010031234": {"ID_ISIN": "XS2010031234", "SECURITY_DES": "ACME 3.25 06/01/29", "SECURITY_TYP": "CORP", "ISSUER": "Acme Industrial Holdings", "CRNCY": "USD", "CPN": 3.25, "ISSUE_DT": "20190601", "MATURITY": "20290601", "DAY_CNT_DES": "30/360"},
+    "SG3260987654": {"ID_ISIN": "SG3260987654", "SECURITY_DES": "SIGB 2 7/8 09/01/30", "SECURITY_TYP": "GOVT", "ISSUER": "Republic of Singapore", "CRNCY": "SGD", "CPN": 2.875, "ISSUE_DT": "20300901", "MATURITY": "20200901", "DAY_CNT_DES": "ACT/365"},
+    "DE0001102580": {"ID_ISIN": "DE0001102580", "SECURITY_DES": "DBR 0 02/15/32", "SECURITY_TYP": "GOVT", "ISSUER": "Federal Republic of Germany", "CRNCY": "EUR", "CPN": 0.0, "ISSUE_DT": "20220111", "MATURITY": "20320215", "DAY_CNT_DES": "ACT/ACT"},
+    "FR0013508470": {"ID_ISIN": "FR0013508470", "SECURITY_DES": "FRTR 0 1/2 05/25/40", "SECURITY_TYP": "GOVT", "ISSUER": "French Republic", "CRNCY": "EUR", "CPN": 0.5, "ISSUE_DT": "20200421", "MATURITY": "20400525", "DAY_CNT_DES": "ACT/ACT"},
+    "XS2222222228": {"ID_ISIN": "XS2222222228", "SECURITY_DES": "GLOBEX FRN 03/15/28", "SECURITY_TYP": "FRN", "ISSUER": "Globex Finance", "CRNCY": "USD", "CPN": 5.1, "ISSUE_DT": "20230315", "MATURITY": "20280315", "DAY_CNT_DES": "ACT/360"},
+    "XS3333333336": {"ID_ISIN": "XS3333333336", "SECURITY_DES": "INITECH 4 10/01/31", "SECURITY_TYP": "CORP", "ISSUER": "Initech Capital", "CRNCY": "EUR", "CPN": 4.0, "ISSUE_DT": "20211001", "MATURITY": "20311001", "DAY_CNT_DES": "30/360"},
+    "GB00BM8Z2S21": {"ID_ISIN": "GB00BM8Z2S21", "SECURITY_DES": "UKT 0 7/8 07/31/33", "SECURITY_TYP": "GOVT", "ISSUER": "UK Debt Management Office", "CRNCY": "GBP", "CPN": 0.875, "ISSUE_DT": "20210730", "MATURITY": "20330731", "DAY_CNT_DES": "ACT/ACT"},
+    "AU3TB0000192": {"ID_ISIN": "AU3TB0000192", "SECURITY_DES": "ACGB 3 3/4 05/21/34", "SECURITY_TYP": "GOVT", "ISSUER": "Commonwealth of Australia", "CRNCY": "AUD", "CPN": 3.75, "ISSUE_DT": "20230510", "MATURITY": "20340521", "DAY_CNT_DES": "ACT/ACT"}
+  },
+  "prices": {
+    "US91282CJL54": {"primary": {"px": 101.42, "age_h": 2}, "secondary": {"px": 101.40, "age_h": 3}},
+    "XS2010031234": {"primary": {"px": 96.85, "age_h": 1}, "secondary": {"px": 96.90, "age_h": 2}},
+    "DE0001102580": {"primary": {"px": 84.10, "age_h": 2}, "secondary": {"px": 84.12, "age_h": 2}},
+    "XS2222222228": {"primary": {"px": 100.20, "age_h": 1}, "secondary": {"px": 101.45, "age_h": 1}},
+    "XS3333333336": {"primary": {"px": 99.12, "age_h": 1}, "secondary": {"px": 99.15, "age_h": 1}},
+    "GB00BM8Z2S21": {"primary": {"px": 78.30, "age_h": 72}, "secondary": {"px": 78.28, "age_h": 70}},
+    "AU3TB0000192": {"primary": {"px": 98.75, "age_h": 4}, "secondary": {"px": 98.77, "age_h": 5}}
+  },
+  "faults": {
+    "DE0001102580": {"reference_data": "transient_once"},
+    "FR0013508470": {"reference_data": "always_timeout"},
+    "XS3333333336": {"secondary_prices": "format_drift"}
+  },
+  "booked": ["XS2010031234", "XS3333333336", "GB00BM8Z2S21", "XS2222222228"]
+}

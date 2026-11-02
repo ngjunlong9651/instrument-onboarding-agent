@@ -1,0 +1,40 @@
+{"query": "Onboard the new US Treasury into the booking system", "expected": "onboard-government-bond"}
+{"query": "set up a new gilt so the desk can trade it", "expected": "onboard-government-bond"}
+{"query": "new sovereign bond setup", "expected": "onboard-government-bond"}
+{"query": "add the latest Bund issue to the trading system", "expected": "onboard-government-bond"}
+{"query": "create an SGS bond record", "expected": "onboard-government-bond"}
+{"query": "onboard a zero coupon government issue", "expected": "onboard-government-bond"}
+{"query": "onboard a corporate bond from a high yield issuer", "expected": "onboard-corporate-bond"}
+{"query": "set up a new Eurobond with an XS ISIN", "expected": "onboard-corporate-bond"}
+{"query": "credit desk needs a new investment grade bond created", "expected": "onboard-corporate-bond"}
+{"query": "new callable corporate issue setup", "expected": "onboard-corporate-bond"}
+{"query": "onboard a floating rate note linked to SOFR", "expected": "onboard-floating-rate-note"}
+{"query": "set up an FRN that resets quarterly off SONIA plus spread", "expected": "onboard-floating-rate-note"}
+{"query": "new floater setup", "expected": "onboard-floating-rate-note"}
+{"query": "run the EOD price validation", "expected": "price-validation-eod"}
+{"query": "check today's closing prices before publishing to risk", "expected": "price-validation-eod"}
+{"query": "validate the clean price against the second vendor", "expected": "price-validation-eod"}
+{"query": "publish validated marks for valuation", "expected": "price-validation-eod"}
+{"query": "daily price check for the bond book", "expected": "price-validation-eod"}
+{"query": "how do I price a bond that has not traded in weeks", "expected": "price-validation-illiquid"}
+{"query": "distressed issuer, quotes are thin, need a price", "expected": "price-validation-illiquid"}
+{"query": "illiquid bond valuation", "expected": "price-validation-illiquid"}
+{"query": "no recent trades so vendor price looks unreliable", "expected": "price-validation-illiquid"}
+{"query": "reconcile the two vendor feeds", "expected": "reconciliation-daily"}
+{"query": "raise breaks where primary and secondary feeds disagree", "expected": "reconciliation-daily"}
+{"query": "daily feed recon for prices", "expected": "reconciliation-daily"}
+{"query": "investigate mismatch between pricing sources and log a ticket", "expected": "reconciliation-daily"}
+{"query": "vendor started sending prices as a fraction of par", "expected": "vendor-format-change-runbook"}
+{"query": "the feed changed its date format overnight and everything fails", "expected": "vendor-format-change-runbook"}
+{"query": "a whole feed suddenly fails validation after a vendor change", "expected": "vendor-format-change-runbook"}
+{"query": "vendor changed the unit of a field", "expected": "vendor-format-change-runbook"}
+{"query": "correct the coupon on an existing instrument", "expected": "instrument-amendment"}
+{"query": "issuer was renamed, update the static data", "expected": "instrument-amendment"}
+{"query": "maturity changed after an exchange offer", "expected": "instrument-amendment"}
+{"query": "amend a live bond after a corporate action", "expected": "instrument-amendment"}
+{"query": "deactivate bonds that have matured", "expected": "matured-instrument-cleanup"}
+{"query": "the bond was called and fully redeemed, retire it", "expected": "matured-instrument-cleanup"}
+{"query": "clean up redeemed securities", "expected": "matured-instrument-cleanup"}
+{"query": "set up a when-issued security before the vendor has data", "expected": "new-issue-when-issued"}
+{"query": "new issue syndication allocation needs a provisional record", "expected": "new-issue-when-issued"}
+{"query": "the bond is announced but not issued yet", "expected": "new-issue-when-issued"}

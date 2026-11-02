@@ -1,0 +1,14 @@
+{"request": "Onboard the new US Treasury US91282CJL54 into the booking system", "expected": "completed"}
+{"request": "Set up the new Australian government bond AU3TB0000192 for trading", "expected": "completed"}
+{"request": "Onboard the German Bund DE0001102580", "expected": "completed"}
+{"request": "Please onboard the corporate bond XS2010031234", "expected": "escalated"}
+{"request": "Onboard Singapore government bond SG3260987654", "expected": "rejected_by_validator"}
+{"request": "Set up new government bond XS1111111110 in the booking system", "expected": "escalated"}
+{"request": "Onboard the French OAT FR0013508470", "expected": "timeout"}
+{"request": "Run end of day price validation for XS2010031234", "expected": "completed"}
+{"request": "Validate today's EOD price for XS3333333336 before publishing", "expected": "rejected_by_validator"}
+{"request": "End of day price check for the gilt GB00BM8Z2S21", "expected": "escalated"}
+{"request": "Reconcile the primary and secondary vendor price feeds for XS2222222228", "expected": "completed"}
+{"request": "Daily feed reconciliation for US91282CJL54", "expected": "completed"}
+{"request": "Price XS2222222228, it is illiquid with no recent trades", "expected": "escalated"}
+{"request": "Onboard the new bond please", "expected": "escalated"}

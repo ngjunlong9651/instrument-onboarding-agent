@@ -1,0 +1,17 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    env:
+      AGENT_OFFLINE: "1"
+      AGENT_VENDOR_LATENCY_MS: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - name: Eval gate (golden set + scenarios)
+        run: python evals/run_eval.py
